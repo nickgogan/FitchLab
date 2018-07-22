@@ -1,1 +1,1 @@
-web: babel-node server
+web: npx cross-env NODE_ENV=production babel-node server
