@@ -59,20 +59,3 @@ if (module.hot) {
     render(NextApp);
   });
 }
-
-/*
-########################################
-                Console Output in-site
-########################################
-*/
-// ConsoleLogHTML.connect(document.querySelector('#log'));
-
-// Async load module/component.
-// TODO: Investigate possibility of using async/await here.
-// Promise.all([import(/* webpackChunkName: "async-bar" */ './components/bar'),])
-//   .then(([bar,]) => {
-//     console.log(`${bar.default()}`);
-//   })
-//   .catch(e => {
-//     console.error(e);
-//   });
