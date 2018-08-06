@@ -140,7 +140,8 @@ const socialinfoGenerator = new GenerateSocialInfo({
 What actually gets sent to webpack config.
 ########################################
 */
-export default (env, pagesNames) => {
+module.exports = (env, pagesNames) => {
+  // export default (env, pagesNames) => {
   const { ifProduction, } = getIfUtils(env);
 
   const pageConfigs = TemplateGenerator(env, pagesNames, ifProduction);

@@ -68,7 +68,8 @@ const purifyCSS = new PurifyCSSPlugin({
               Exported Webpack Config
 ########################################
 */
-export default env => {
+module.exports = env => {
+  // export default env => {
   const { ifProduction, } = getIfUtils(env);
 
   return {

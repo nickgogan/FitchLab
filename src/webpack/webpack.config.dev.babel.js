@@ -59,7 +59,8 @@ const HMR = new webpack.HotModuleReplacementPlugin();
 ########################################
 */
 
-export default () => {
+module.exports = () => {
+  // export default () => {
   const ENV = setEnvironment('development');
 
   return MergePlugin(

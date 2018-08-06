@@ -22,7 +22,8 @@ const precompileJS = new PrepackJSPlugin();
 const enhanceJS = new OptimizeJSPlugin();
 const treeshakeCommonJS = new CJSShakePlugin.Plugin();
 
-export default env => {
+// export default env => {
+module.exports = env => {
   const { ifProduction, } = getIfUtils(env);
 
   return {

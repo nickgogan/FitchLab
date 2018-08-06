@@ -114,7 +114,8 @@ const webpackBundleAnalyzer = new BundleAnalyzerPlugin.BundleAnalyzerPlugin();
               Exported Webpack Config
 ########################################
 */
-export default () => {
+// export default () => {
+module.exports = () => {
   const ENV = setEnvironment('production');
 
   return MergePlugin(
