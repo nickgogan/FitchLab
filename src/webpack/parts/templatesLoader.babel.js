@@ -1,9 +1,14 @@
-import path from 'path';
-import HtmlPlugin from 'html-webpack-plugin'; // eslint-disable-line
-// import CriticalCSS from 'html-critical-webpack-plugin'; // eslint-disable-line
-import RobotsGeneratorPlugin from 'robotstxt-webpack-plugin'; // eslint-disable-line
-import GenerateSocialInfo from 'social-tags-webpack-plugin'; // eslint-disable-line
-import { getIfUtils, removeEmpty } from 'webpack-config-utils'; //eslint-disable-line
+// import path from 'path';
+// import HtmlPlugin from 'html-webpack-plugin'; // eslint-disable-line
+// // import CriticalCSS from 'html-critical-webpack-plugin'; // eslint-disable-line
+// import RobotsGeneratorPlugin from 'robotstxt-webpack-plugin'; // eslint-disable-line
+// import GenerateSocialInfo from 'social-tags-webpack-plugin'; // eslint-disable-line
+// import { getIfUtils, removeEmpty } from 'webpack-config-utils'; //eslint-disable-line
+const path = require('path');
+const HtmlPlugin = require('html-webpack-plugin'); // eslint-disable-line
+const RobotsGeneratorPlugin = require('robotstxt-webpack-plugin').default; // eslint-disable-line
+const GenerateSocialInfo = require('social-tags-webpack-plugin'); // eslint-disable-line
+const { getIfUtils, removeEmpty } = require('webpack-config-utils'); //eslint-disable-line
 
 /*
 ########################################

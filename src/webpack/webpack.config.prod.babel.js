@@ -1,29 +1,48 @@
-import path from 'path';
-import webpack from 'webpack';
-import MergePlugin from 'webpack-merge';
-import MonitorPlugin from 'webpack-monitor';
-import BundleAnalyzerPlugin from 'webpack-bundle-analyzer';
-import GitRevisionPlugin from 'git-revision-webpack-plugin';
-import WebpackManifestPlugin from 'inline-manifest-webpack-plugin';
-import PWAManifest from 'webpack-pwa-manifest';
-import WebpackCopyPlugin from 'copy-webpack-plugin';
-import OfflinePlugin from 'offline-plugin';
-import CompressionPlugin from 'compression-webpack-plugin';
+// import path from 'path';
+// import webpack from 'webpack';
+// import MergePlugin from 'webpack-merge';
+// import MonitorPlugin from 'webpack-monitor';
+// import BundleAnalyzerPlugin from 'webpack-bundle-analyzer';
+// import GitRevisionPlugin from 'git-revision-webpack-plugin';
+// import WebpackManifestPlugin from 'inline-manifest-webpack-plugin';
+// import PWAManifest from 'webpack-pwa-manifest';
+// import WebpackCopyPlugin from 'copy-webpack-plugin';
+// import OfflinePlugin from 'offline-plugin';
+// import CompressionPlugin from 'compression-webpack-plugin';
+const path = require('path');
+const webpack = require('webpack');
+const MergePlugin = require('webpack-merge');
+const MonitorPlugin = require('webpack-monitor');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer');
+const GitRevisionPlugin = require('git-revision-webpack-plugin');
+const WebpackManifestPlugin = require('inline-manifest-webpack-plugin');
+const PWAManifest = require('webpack-pwa-manifest');
+const WebpackCopyPlugin = require('copy-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
-import nameNonNormalModules from './helpers/nameNonNormalModules';
-import setEnvironment from './helpers/setEnvironment';
-import stringifyEnvironment from './helpers/stringifyEnvironment';
+// import nameNonNormalModules from './helpers/nameNonNormalModules';
+// import setEnvironment from './helpers/setEnvironment';
+// import stringifyEnvironment from './helpers/stringifyEnvironment';
+const nameNonNormalModules = require('./helpers/nameNonNormalModules').default;
+const setEnvironment = require('./helpers/setEnvironment').default;
+const stringifyEnvironment = require('./helpers/stringifyEnvironment').default;
 
 /*
 ########################################
                       Import loaders
 ########################################
 */
-import loadBabel from './parts/babelLoader.babel';
-import loadAssets from './parts/assetsLoader.babel';
-import loadTemplates from './parts/templatesLoader.babel';
-import loadStyles from './parts/postcssLoader.babel';
-import extractBundles from './parts/extractBundles.babel';
+// import loadBabel from './parts/babelLoader.babel';
+// import loadAssets from './parts/assetsLoader.babel';
+// import loadTemplates from './parts/templatesLoader.babel';
+// import loadStyles from './parts/postcssLoader.babel';
+// import extractBundles from './parts/extractBundles.babel';
+const loadBabel = require('./parts/babelLoader.babel').default;
+const loadAssets = require('./parts/assetsLoader.babel').default;
+const loadTemplates = require('./parts/templatesLoader.babel').default;
+const loadStyles = require('./parts/postcssLoader.babel').default;
+const extractBundles = require('./parts/extractBundles.babel').default;
 
 /*
 ########################################
