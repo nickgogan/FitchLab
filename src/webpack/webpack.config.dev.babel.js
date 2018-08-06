@@ -14,9 +14,9 @@ const InlineManifestPlugin = require('inline-manifest-webpack-plugin');
 // import nameNonNormalModules from './helpers/nameNonNormalModules';
 // import setEnvironment from './helpers/setEnvironment';
 // import stringifyEnvironment from './helpers/stringifyEnvironment';
-const nameNonNormalModules = require('./helpers/nameNonNormalModules').default;
-const setEnvironment = require('./helpers/setEnvironment').default;
-const stringifyEnvironment = require('./helpers/stringifyEnvironment').default;
+const nameNonNormalModules = require('./helpers/nameNonNormalModules');
+const setEnvironment = require('./helpers/setEnvironment');
+const stringifyEnvironment = require('./helpers/stringifyEnvironment');
 
 /*
 ########################################
@@ -28,11 +28,11 @@ const stringifyEnvironment = require('./helpers/stringifyEnvironment').default;
 // import loadTemplates from './parts/templatesLoader.babel';
 // import loadStyles from './parts/postcssLoader.babel';
 // import extractBundles from './parts/extractBundles.babel';
-const loadBabel = require('./parts/babelLoader.babel').default;
-const loadAssets = require('./parts/assetsLoader.babel').default;
-const loadTemplates = require('./parts/templatesLoader.babel').default;
-const loadStyles = require('./parts/postcssLoader.babel').default;
-const extractBundles = require('./parts/extractBundles.babel').default;
+const loadBabel = require('./parts/babelLoader.babel');
+const loadAssets = require('./parts/assetsLoader.babel');
+const loadTemplates = require('./parts/templatesLoader.babel');
+const loadStyles = require('./parts/postcssLoader.babel');
+const extractBundles = require('./parts/extractBundles.babel');
 
 /*
 ########################################

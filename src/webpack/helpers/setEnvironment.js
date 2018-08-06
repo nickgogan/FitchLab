@@ -30,7 +30,8 @@ const generateEnv = env => {
   return Object.assign({}, commonEnv, specificEnv);
 };
 
-export default env => {
+// export default env => {
+module.exports = env => {
   const ENV = generateEnv(env);
 
   // NODE_ENV set by cross-env in the build scripts.
