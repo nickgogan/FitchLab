@@ -1,7 +1,9 @@
 // @ts-check
 
-import path from 'path';
-import fs from 'fs-extra';
+// import path from 'path';
+// import fs from 'fs-extra';
+const path = require('path');
+const fs = require('fs-extra');
 
 export default dir => {
   let cssfiles = []; // eslint-disable-line
