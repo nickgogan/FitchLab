@@ -7,6 +7,7 @@ import { AppContainer, } from 'react-hot-loader';
 
 import App from './Screens/Root';
 
+let render;
 /*
 ########################################
             Service Worker
@@ -34,22 +35,29 @@ if (WEBPACK_ENV === 'production') {
       console.log('SW Event:', 'onUpdateFailed');
     },
   });
+
+  render = Component => {
+    ReactDOM.render(
+      <Component className='container' />,
+      document.getElementById('AppContainer')
+    );
+  };
 } else if (WEBPACK_ENV === 'development') {
   console.log(`WEBPACK_ENV: ${WEBPACK_ENV}`);
   console.log(`FRONT-END - NODE_ENV: ${process.env.NODE_ENV}`);
+
+  render = Component => {
+    ReactDOM.render(
+      <AppContainer>
+        <Component className='container' />
+      </AppContainer>,
+      document.getElementById('AppContainer')
+    );
+  };
 } else {
   console.log(`FRONT-END - WEBPACK_ENV not seen: ${WEBPACK_ENV}`);
   console.log(`FRONT-END - NODE_ENV: ${process.env.NODE_ENV}`);
 }
-
-const render = Component => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component className='container' />
-    </AppContainer>,
-    document.getElementById('AppContainer')
-  );
-};
 
 render(App);
 
