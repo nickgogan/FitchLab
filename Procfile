@@ -1,1 +1,1 @@
-web: npm run prod:serve
+web: npx cross-env NODE_ENV=production babel-node server
