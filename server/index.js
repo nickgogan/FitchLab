@@ -59,7 +59,7 @@ if (process.env.NODE_ENV === 'development') {
   port = process.env.PORT;
   host = process.env.HOST;
 
-  fixCSSPaths(path.resolve(__dirname, '../dist')); // Change the '\' to '/' in output css
+  // fixCSSPaths(path.resolve(__dirname, '../dist')); // Change the '\' to '/' in output css
 
   app.use(express.static(path.resolve(__dirname, '../dist')));
 } else {
