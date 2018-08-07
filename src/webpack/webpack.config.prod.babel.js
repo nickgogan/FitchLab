@@ -12,8 +12,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const MergePlugin = require('webpack-merge');
-const MonitorPlugin = require('webpack-monitor');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer');
+// const MonitorPlugin = require('webpack-monitor');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer');
 // const GitRevisionPlugin = require('git-revision-webpack-plugin');
 const WebpackManifestPlugin = require('inline-manifest-webpack-plugin');
 const PWAManifest = require('webpack-pwa-manifest');
