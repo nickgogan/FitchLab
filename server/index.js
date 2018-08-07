@@ -1,11 +1,17 @@
 // @ts-check
-import path from 'path';
-import fs from 'fs-extra';
-import express from 'express';
-import webpack from 'webpack';
-import cors from 'cors';
+// import path from 'path';
+// import fs from 'fs-extra';
+// import express from 'express';
+// import webpack from 'webpack';
+// import cors from 'cors';
+const path = require('path');
+const fs = require('fs-extra');
+const express = require('express');
+const webpack = require('webpack');
+const cors = require('cors');
 
-import fixCSSPaths from './fixCSSPaths';
+// import fixCSSPaths from './fixCSSPaths';
+const fixCSSPaths = require('./fixCSSPaths');
 
 /*
 ########################################
