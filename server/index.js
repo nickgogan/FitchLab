@@ -54,7 +54,9 @@ if (process.env.NODE_ENV === 'development') {
   // To get the variables from DefinePlugin to appear here, you must create the webpack compiler
   // const config = require('../src/webpack/webpack.config.prod.babel').default;
   const config = require('../src/webpack/webpack.config.prod.babel');
+  console(config);
   const compiler = webpack(config());
+  console.log(compiler);
 
   port = process.env.PORT;
   host = process.env.HOST;
