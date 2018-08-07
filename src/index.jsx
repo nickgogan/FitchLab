@@ -3,7 +3,6 @@
 // import 'babel-polyfill'; // Use if needed.
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer, } from 'react-hot-loader';
 
 import App from './Screens/Root';
 
@@ -45,6 +44,9 @@ if (WEBPACK_ENV === 'production') {
 } else if (WEBPACK_ENV === 'development') {
   console.log(`WEBPACK_ENV: ${WEBPACK_ENV}`);
   console.log(`FRONT-END - NODE_ENV: ${process.env.NODE_ENV}`);
+
+  const AppContainer = require('react-hot-loader');
+  // import { AppContainer, } from 'react-hot-loader';
 
   render = Component => {
     ReactDOM.render(
