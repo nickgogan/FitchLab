@@ -1,1 +1,1 @@
-web: node server
+web: babel-node server
