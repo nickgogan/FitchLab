@@ -1,1 +1,1 @@
-web: npm run prod:build && babel-node server
+web: npm run prod
