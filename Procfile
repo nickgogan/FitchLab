@@ -1,1 +1,1 @@
-web: babel-node server
+web: npx babel-node server
