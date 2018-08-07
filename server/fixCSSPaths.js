@@ -5,7 +5,8 @@
 const path = require('path');
 const fs = require('fs-extra');
 
-export default dir => {
+// export default dir => {
+module.exports = dir => {
   let cssfiles = []; // eslint-disable-line
 
   fs.readdir(dir, (err, files) => {
