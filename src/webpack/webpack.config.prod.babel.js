@@ -102,12 +102,12 @@ const webpackServiceWorker = new OfflinePlugin({
   ServiceWorker: { events: true, minify: true, }, // entry: 'sw-handler.js', },
   excludes: ['.htaccess', '.nginx.conf',],
 });
-const webpackMonitor = new MonitorPlugin({
-  capture: true,
-  launch: true,
-  port: 3000,
-});
-const webpackBundleAnalyzer = new BundleAnalyzerPlugin.BundleAnalyzerPlugin();
+// const webpackMonitor = new MonitorPlugin({
+//   capture: true,
+//   launch: true,
+//   port: 3000,
+// });
+// const webpackBundleAnalyzer = new BundleAnalyzerPlugin.BundleAnalyzerPlugin();
 
 /*
 ########################################
