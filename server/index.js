@@ -66,6 +66,7 @@ if (process.env.NODE_ENV === 'development') {
   console.log(`BACKEND - Unable to detect NODE_ENV: ${process.env.NODE_ENV}`);
 }
 
+// app.get('*', async (req, res) => { // TODO
 app.get('/', async (req, res) => {
   const index = await fs.readFile(path.resolve(__dirname, '../build'));
   res.send(index);

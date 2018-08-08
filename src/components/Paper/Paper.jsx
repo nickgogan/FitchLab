@@ -1,4 +1,4 @@
-import React from 'React'; // eslint-disable-line
+import React from 'react'; // eslint-disable-line
 import { Segment, Card, List } from 'semantic-ui-react'; // eslint-disable-line
 
 import styles from './Paper.postcss';

@@ -45,7 +45,7 @@ if (WEBPACK_ENV === 'production') {
   console.log(`WEBPACK_ENV: ${WEBPACK_ENV}`);
   console.log(`FRONT-END - NODE_ENV: ${process.env.NODE_ENV}`);
 
-  const AppContainer = require('react-hot-loader');
+  const AppContainer = require('react-hot-loader').AppContainer;
   // import { AppContainer, } from 'react-hot-loader';
 
   render = Component => {
