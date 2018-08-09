@@ -1,15 +1,15 @@
-// import path from 'path';
-// import CJSShakePlugin from 'webpack-common-shake'; // eslint-disable-line
-// import UglifyJSPlugin from 'uglifyjs-webpack-plugin'; //eslint-disable-line
-// import PrepackJSPlugin from 'prepack-webpack-plugin'; //eslint-disable-line
-// import OptimizeJSPlugin from 'optimize-js-plugin'; //eslint-disable-line
-// import { getIfUtils, removeEmpty } from 'webpack-config-utils'; //eslint-disable-line
-const path = require('path');
-const CJSShakePlugin = require('webpack-common-shake'); // eslint-disable-line
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin'); //eslint-disable-line
-const PrepackJSPlugin = require('prepack-webpack-plugin').default; //eslint-disable-line
-const OptimizeJSPlugin = require('optimize-js-plugin'); //eslint-disable-line
-const { getIfUtils, removeEmpty } = require('webpack-config-utils'); //eslint-disable-line
+import path from 'path';
+import CJSShakePlugin from 'webpack-common-shake'; // eslint-disable-line
+import UglifyJSPlugin from 'uglifyjs-webpack-plugin'; //eslint-disable-line
+import PrepackJSPlugin from 'prepack-webpack-plugin'; //eslint-disable-line
+import OptimizeJSPlugin from 'optimize-js-plugin'; //eslint-disable-line
+import { getIfUtils, removeEmpty } from 'webpack-config-utils'; //eslint-disable-line
+// const path = require('path');
+// const CJSShakePlugin = require('webpack-common-shake'); // eslint-disable-line
+// const UglifyJSPlugin = require('uglifyjs-webpack-plugin'); //eslint-disable-line
+// const PrepackJSPlugin = require('prepack-webpack-plugin').default; //eslint-disable-line
+// const OptimizeJSPlugin = require('optimize-js-plugin'); //eslint-disable-line
+// const { getIfUtils, removeEmpty } = require('webpack-config-utils'); //eslint-disable-line
 
 const uglifyJS = new UglifyJSPlugin({
   cache: true, // Default dir: node_modules/.cache/uglifyjs-webpack-plugin.
@@ -22,8 +22,8 @@ const precompileJS = new PrepackJSPlugin();
 const enhanceJS = new OptimizeJSPlugin();
 const treeshakeCommonJS = new CJSShakePlugin.Plugin();
 
-// export default env => {
-module.exports = env => {
+export default env => {
+  // module.exports = env => {
   const { ifProduction, } = getIfUtils(env);
 
   return {

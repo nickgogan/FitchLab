@@ -1,5 +1,5 @@
-// export default () => ({
-module.exports = () => ({
+export default () => ({
+  // module.exports = () => ({
   module: {
     rules: [
       {

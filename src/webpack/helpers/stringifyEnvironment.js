@@ -1,5 +1,5 @@
-// export default Env => {
-module.exports = Env => {
+export default Env => {
+  // module.exports = Env => {
   const final = {}; // eslint-disable-line
   const inputValues = Object.values(Env).map(value => JSON.stringify(value));
   const inputKeys = Object.keys(Env);

@@ -1,15 +1,15 @@
-// import path, { extname } from 'path'; // eslint-disable-line
-// import glob from 'glob-all'; // eslint-disable-line
-// import combineLoaders from 'webpack-combine-loaders'; // eslint-disable-line
-// import ExtractTextPlugin from 'extract-text-webpack-plugin'; // eslint-disable-line
-// import PurifyCSSPlugin from 'purifycss-webpack'; // eslint-disable-line
-// import { getIfUtils, removeEmpty } from 'webpack-config-utils'; // eslint-disable-line
-const path = require('path'); // eslint-disable-line
-const glob = require('glob-all'); // eslint-disable-line
-const combineLoaders = require('webpack-combine-loaders'); // eslint-disable-line
-const ExtractTextPlugin = require('extract-text-webpack-plugin'); // eslint-disable-line
-const PurifyCSSPlugin = require('purifycss-webpack'); // eslint-disable-line
-const { getIfUtils, removeEmpty } = require('webpack-config-utils'); // eslint-disable-line
+import path, { extname } from 'path'; // eslint-disable-line
+import glob from 'glob-all'; // eslint-disable-line
+import combineLoaders from 'webpack-combine-loaders'; // eslint-disable-line
+import ExtractTextPlugin from 'extract-text-webpack-plugin'; // eslint-disable-line
+import PurifyCSSPlugin from 'purifycss-webpack'; // eslint-disable-line
+import { getIfUtils, removeEmpty } from 'webpack-config-utils'; // eslint-disable-line
+// const path = require('path'); // eslint-disable-line
+// const glob = require('glob-all'); // eslint-disable-line
+// const combineLoaders = require('webpack-combine-loaders'); // eslint-disable-line
+// const ExtractTextPlugin = require('extract-text-webpack-plugin'); // eslint-disable-line
+// const PurifyCSSPlugin = require('purifycss-webpack'); // eslint-disable-line
+// const { getIfUtils, removeEmpty } = require('webpack-config-utils'); // eslint-disable-line
 
 /*
 ########################################
@@ -68,8 +68,8 @@ const purifyCSS = new PurifyCSSPlugin({
               Exported Webpack Config
 ########################################
 */
-module.exports = env => {
-  // export default env => {
+// module.exports = env => {
+export default env => {
   const { ifProduction, } = getIfUtils(env);
 
   return {

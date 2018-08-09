@@ -1,9 +1,9 @@
-// import path from 'path';
-// import dotEnv from 'dotenv-safe'; // eslint-disable-line
-// import pkg from '../../../package.json';
-const path = require('path');
-const dotEnv = require('dotenv-safe'); // eslint-disable-line
-const pkg = require('../../../package.json');
+import path from 'path';
+import dotEnv from 'dotenv-safe'; // eslint-disable-line
+import pkg from '../../../package.json';
+// const path = require('path');
+// const dotEnv = require('dotenv-safe'); // eslint-disable-line
+// const pkg = require('../../../package.json');
 
 const generateEnv = env => {
   const commonEnv = dotEnv.load({
@@ -30,8 +30,8 @@ const generateEnv = env => {
   return Object.assign({}, commonEnv, specificEnv);
 };
 
-// export default env => {
-module.exports = env => {
+export default env => {
+  // module.exports = env => {
   const ENV = generateEnv(env);
 
   // NODE_ENV set by cross-env in the build scripts.

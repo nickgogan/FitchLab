@@ -45,8 +45,8 @@ if (WEBPACK_ENV === 'production') {
   console.log(`WEBPACK_ENV: ${WEBPACK_ENV}`);
   console.log(`FRONT-END - NODE_ENV: ${process.env.NODE_ENV}`);
 
-  const AppContainer = require('react-hot-loader').AppContainer;
-  // import { AppContainer, } from 'react-hot-loader';
+  // Do NOT do object destructuring here!
+  let AppContainer = require('react-hot-loader').AppContainer; // eslint-disable-line
 
   render = Component => {
     ReactDOM.render(

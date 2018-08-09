@@ -1,17 +1,11 @@
 // @ts-check
-// import path from 'path';
-// import fs from 'fs-extra';
-// import express from 'express';
-// import webpack from 'webpack';
-// import cors from 'cors';
-const path = require('path');
-const fs = require('fs-extra');
-const express = require('express');
-const webpack = require('webpack');
-const cors = require('cors');
+import path from 'path';
+import fs from 'fs-extra';
+import express from 'express';
+import webpack from 'webpack';
+import cors from 'cors';
 
-// import fixCSSPaths from './fixCSSPaths';
-const fixCSSPaths = require('./fixCSSPaths');
+import fixCSSPaths from './fixCSSPaths';
 
 /*
 ########################################
@@ -28,8 +22,8 @@ if (process.env.NODE_ENV === 'development') {
   console.log(`BACKEND - NODE_ENV: ${process.env.NODE_ENV}`);
 
   // To get the variables from DefinePlugin to appear here, you must create the webpack compiler
-  // const config = require('../src/webpack/webpack.config.dev.babel').default;
-  const config = require('../src/webpack/webpack.config.dev.babel');
+  const config = require('../src/webpack/webpack.config.dev.babel').default;
+  // const config = require('../src/webpack/webpack.config.dev.babel');
   const compiler = webpack(config());
 
   // These are set by webpack.DefinePlugin in the webpack config.
@@ -52,14 +46,14 @@ if (process.env.NODE_ENV === 'development') {
   console.log(`BACKEND - NODE_ENV: ${process.env.NODE_ENV}`);
 
   // To get the variables from DefinePlugin to appear here, you must create the webpack compiler
-  // const config = require('../src/webpack/webpack.config.prod.babel').default;
-  const config = require('../src/webpack/webpack.config.prod.babel');
+  const config = require('../src/webpack/webpack.config.prod.babel').default; // TODO
+  // const config = require('../src/webpack/webpack.config.prod.babel');
   const compiler = webpack(config());
 
   port = process.env.PORT;
   host = process.env.HOST;
 
-  // fixCSSPaths(path.resolve(__dirname, '../dist')); // Change the '\' to '/' in output css
+  fixCSSPaths(path.resolve(__dirname, '../dist')); // Change the '\' to '/' in output css
 
   app.use(express.static(path.resolve(__dirname, '../dist')));
 } else {

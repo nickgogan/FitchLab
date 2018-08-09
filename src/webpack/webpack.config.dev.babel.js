@@ -1,38 +1,38 @@
-// import path from 'path';
-// import webpack from 'webpack';
-// import MergePlugin from 'webpack-merge';
-// import MonitorPlugin from 'webpack-monitor';
-// import BundleAnalyzerPlugin from 'webpack-bundle-analyzer';
-// import InlineManifestPlugin from 'inline-manifest-webpack-plugin';
-const path = require('path');
-const webpack = require('webpack');
-const MergePlugin = require('webpack-merge');
-const MonitorPlugin = require('webpack-monitor');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer');
-const InlineManifestPlugin = require('inline-manifest-webpack-plugin');
+import path from 'path';
+import webpack from 'webpack';
+import MergePlugin from 'webpack-merge';
+import MonitorPlugin from 'webpack-monitor';
+import BundleAnalyzerPlugin from 'webpack-bundle-analyzer';
+import InlineManifestPlugin from 'inline-manifest-webpack-plugin';
+// const path = require('path');
+// const webpack = require('webpack');
+// const MergePlugin = require('webpack-merge');
+// const MonitorPlugin = require('webpack-monitor');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer');
+// const InlineManifestPlugin = require('inline-manifest-webpack-plugin');
 
-// import nameNonNormalModules from './helpers/nameNonNormalModules';
-// import setEnvironment from './helpers/setEnvironment';
-// import stringifyEnvironment from './helpers/stringifyEnvironment';
-const nameNonNormalModules = require('./helpers/nameNonNormalModules');
-const setEnvironment = require('./helpers/setEnvironment');
-const stringifyEnvironment = require('./helpers/stringifyEnvironment');
+import nameNonNormalModules from './helpers/nameNonNormalModules';
+import setEnvironment from './helpers/setEnvironment';
+import stringifyEnvironment from './helpers/stringifyEnvironment';
+// const nameNonNormalModules = require('./helpers/nameNonNormalModules');
+// const setEnvironment = require('./helpers/setEnvironment');
+// const stringifyEnvironment = require('./helpers/stringifyEnvironment');
 
 /*
 ########################################
                       Import loaders
 ########################################
 */
-// import loadBabel from './parts/babelLoader.babel';
-// import loadAssets from './parts/assetsLoader.babel';
-// import loadTemplates from './parts/templatesLoader.babel';
-// import loadStyles from './parts/postcssLoader.babel';
-// import extractBundles from './parts/extractBundles.babel';
-const loadBabel = require('./parts/babelLoader.babel');
-const loadAssets = require('./parts/assetsLoader.babel');
-const loadTemplates = require('./parts/templatesLoader.babel');
-const loadStyles = require('./parts/postcssLoader.babel');
-const extractBundles = require('./parts/extractBundles.babel');
+import loadBabel from './parts/babelLoader.babel';
+import loadAssets from './parts/assetsLoader.babel';
+import loadTemplates from './parts/templatesLoader.babel';
+import loadStyles from './parts/postcssLoader.babel';
+import extractBundles from './parts/extractBundles.babel';
+// const loadBabel = require('./parts/babelLoader.babel');
+// const loadAssets = require('./parts/assetsLoader.babel');
+// const loadTemplates = require('./parts/templatesLoader.babel');
+// const loadStyles = require('./parts/postcssLoader.babel');
+// const extractBundles = require('./parts/extractBundles.babel');
 
 /*
 ########################################
@@ -59,8 +59,8 @@ const HMR = new webpack.HotModuleReplacementPlugin();
 ########################################
 */
 
-module.exports = () => {
-  // export default () => {
+// module.exports = () => {
+export default () => {
   const ENV = setEnvironment('development');
 
   return MergePlugin(
